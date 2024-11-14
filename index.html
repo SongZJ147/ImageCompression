@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>图片压缩工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>图片压缩工具</h1>
+        <p class="subtitle">简单，高效的在线图片压缩工具</p>
+        <div id="uploadArea" class="upload-area">
+            <input type="file" id="upload" accept="image/png, image/jpeg" style="display: none;">
+            <img src="download-icon.jpg" alt="下载图标" class="download-icon">
+            <p class="upload-text">点击或拖拽图片到这里</p>
+            <p class="upload-subtext">支持PNG，JPG格式</p>
+        </div>
+        <div class="preview">
+            <div id="originalSection" class="hidden">
+                <h2>原始图片</h2>
+                <img id="originalImage" alt="原始图片预览" class="thumbnail">
+                <p id="originalSize"></p>
+            </div>
+            <div class="hidden" id="compressedSection">
+                <h2>压缩图片</h2>
+                <img id="compressedImage" alt="压缩图片预览" class="thumbnail">
+                <p id="compressedSize"></p>
+            </div>
+        </div>
+        <div class="controls hidden">
+            <label for="compressionRatio">压缩比例:</label>
+            <input type="range" id="compressionRatio" min="0.1" max="1" step="0.1" value="0.7">
+            <button id="compressButton" class="primary-button">压缩图片</button>
+            <button id="changeButton" class="primary-button">更换图片</button>
+            <a id="downloadLink" download="compressed-image.jpg" class="download-link">下载压缩图片</a>
+        </div>
+    </div>
+    <div id="modal" class="modal hidden">
+        <span id="closeModal" class="close">&times;</span>
+        <img id="modalImage" class="modal-content">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

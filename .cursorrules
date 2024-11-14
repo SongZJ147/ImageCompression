@@ -1,0 +1,13 @@
+ # .cursorrules 文件示例
+
+# 规则1: 描述规则的用途
+# 例如：设置光标在特定文件类型中的行为
+cursor_behavior = "default"
+
+# 规则2: 其他配置
+# 例如：定义光标在代码块中的移动方式
+cursor_behavior = "code_navigation"
+
+# 规则3: 自定义设置
+# 例如：在特定条件下禁用某些功能
+disable_feature = "auto_indent"
